@@ -1,0 +1,166 @@
+.contact-section {
+  padding: 4rem 2rem;
+  background: var(--background-gradient-light); /* Use more vibrant gradient */
+  color: var(--text-dark);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 2.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.05); /* Add subtle text shadow */
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.contact-details,
+.contact-social {
+  flex: 1;
+  padding: 2.5rem; /* Slightly more padding */
+  background-color: var(--text-white);
+  border-radius: 15px;
+  box-shadow: var(--shadow-medium);
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-details:hover,
+.contact-social:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-strong);
+}
+
+.contact-details p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: var(--text-dark); /* Use darker text color */
+}
+
+.contact-details a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-details a:hover {
+  color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.contact-social h2 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.05); /* Add subtle text shadow */
+}
+
+.social-icons-contact {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  font-size: 2.5rem;
+  color: var(--text-white);
+  background-color: var(--primary-color); /* Default primary color background */
+  border-radius: 50%;
+  padding: 0.8rem;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+}
+
+.social-icon:hover {
+  transform: scale(1.15); /* Slightly larger scale-up on hover */
+  box-shadow: var(--shadow-strong); /* Stronger shadow on hover */
+}
+
+.facebook-contact {
+  background-color: #3b5998; /* Facebook brand color */
+}
+.facebook-contact:hover {
+  background-color: #2d4373;
+}
+
+.linkedin-contact {
+  background-color: #0077b5; /* LinkedIn brand color */
+}
+.linkedin-contact:hover {
+  background-color: #005f93;
+}
+
+.instagram-contact {
+  background-color: #E1306C; /* Instagram brand color (more vibrant) */
+}
+.instagram-contact:hover {
+  background-color: #C13584;
+}
+
+.youtube-contact {
+  background-color: #FF0000; /* YouTube brand color */
+}
+.youtube-contact:hover {
+  background-color: #cc0000;
+}
+
+@media (min-width: 768px) {
+  .contact-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .contact-details,
+  .contact-social {
+    width: 48%;
+  }
+
+  .contact-social h2 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 3rem 1rem;
+  }
+
+  .contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-details,
+  .contact-social {
+    padding: 1.5rem;
+  }
+
+  .contact-details p {
+    font-size: 1rem;
+  }
+
+  .social-icon {
+    font-size: 2rem;
+    padding: 0.6rem;
+    width: 50px;
+    height: 50px;
+  }
+}

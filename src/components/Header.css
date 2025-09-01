@@ -1,0 +1,95 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px; /* Standard header height */
+  padding: 0 2rem; /* Adjusted padding for 70px height */
+  background-color: #002b5c; /* Deep, elegant dark blue */
+  box-shadow: var(--shadow-medium);
+  transition: background-color 0.3s ease, height 0.3s ease, padding 0.3s ease;
+}
+
+.header.shrink {
+  height: 50px; /* Shrunk header height */
+  padding: 0 1.5rem; /* Adjusted padding when shrunk */
+  background-color: #002b5c; /* Keep the same dark blue, but could be darker if desired */
+}
+
+.header.shrink .chuti-logo {
+  width: 40px; /* Smaller logo when header shrinks */
+  height: 40px;
+}
+
+.header.shrink .navigation a {
+  font-size: 1rem; /* Slightly smaller font size for nav links when shrunk */
+}
+
+.chuti-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--text-white);
+  transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.chuti-logo:hover {
+  border-color: var(--accent-color-1);
+  transform: scale(1.05);
+}
+
+/* Remove old h1 styling within .logo */
+.logo h1 {
+  display: none;
+}
+
+.navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navigation li {
+  margin-left: 2rem;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: var(--text-white);
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navigation a:hover {
+  color: var(--accent-color-1);
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments for header */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: auto; /* Allow height to adjust on mobile */
+    padding: 1rem; /* Adjust padding for mobile */
+  }
+
+  .navigation ul {
+    margin-top: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navigation li {
+    margin: 0.5rem 0;
+  }
+
+  .chuti-logo {
+    width: 60px;
+    height: 60px;
+  }
+}

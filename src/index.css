@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Basic Styles */
+:root {
+  --primary-color: #008cff; /* More vibrant blue */
+  --secondary-color: #38c172; /* More vibrant green */
+  --accent-color-1: #ff7f50; /* Coral for accents */
+  --accent-color-2: #8a2be2; /* Blue-violet for other accents */
+  --background-light: #f8fcfd; /* Very light off-white with hint of blue */
+  --background-medium: #e6f7ff; /* Pale blue */
+  --background-gradient-light: linear-gradient(135deg, #e0f7fa 0%, #e8f5e9 100%); /* Soft blue/green gradient */
+  --background-dark: #2c3e50; /* Darker grey for footer */
+  --text-dark: #2c3e50; /* Darker text */
+  --text-medium: #555;
+  --text-light: #ecf0f1; /* Light gray for footer */
+  --text-white: #ffffff;
+  --shadow-light: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 8px 20px rgba(0, 0, 0, 0.15);
+  --shadow-strong: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--primary-color);
+  line-height: 1.2;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.05); /* Subtle text shadow for headings */
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+a:hover {
+  color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+/* General responsiveness */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 87.5%; /* 14px base for small screens */
+  }
+}

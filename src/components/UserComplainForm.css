@@ -1,0 +1,129 @@
+.complain-form-container {
+  width: 100%;
+  padding: 4rem 2rem;
+  background: var(--background-gradient-light); /* Use vibrant gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  box-sizing: border-box;
+}
+
+.complain-form-card {
+  background-color: var(--text-white);
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: var(--shadow-strong); /* Stronger shadow */
+  width: 100%;
+  max-width: 60%;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.complain-form-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-strong);
+}
+
+.complain-form-card h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+.form-group {
+  margin-bottom: 1.8rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 1.05rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--secondary-color); /* Use secondary color on focus */
+  outline: none;
+  box-shadow: 0 0 0 0.3rem rgba(56, 193, 114, 0.3); /* More vibrant shadow on focus */
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 1.2rem;
+  background-color: var(--secondary-color);
+  color: var(--text-white);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: var(--primary-color); /* Change to primary color on hover */
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-strong);
+}
+
+@media (max-width: 1024px) {
+  .complain-form-card {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .complain-form-container {
+    padding: 2rem 1rem;
+    min-height: auto;
+  }
+
+  .complain-form-card {
+    padding: 2rem;
+    max-width: 95%;
+  }
+
+  .complain-form-card h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .form-group label {
+    font-size: 1rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.8rem 1rem;
+  }
+
+  .submit-button {
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+}

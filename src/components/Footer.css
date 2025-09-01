@@ -1,0 +1,108 @@
+.footer {
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  padding: 0.8rem 2rem; /* Reduced vertical padding for more compact look */
+  text-align: center;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 0.8rem; /* Reduced gap for more compactness */
+}
+
+.footer-logo h1 {
+  margin: 0;
+  color: white; /* White color for logo */
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif; /* Modern stylish font */
+  border: 1px solid rgb(203, 104, 104);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer-logo h1:hover {
+  background-color: white;
+  color: #333333; /* Dark gray on hover */
+}
+
+.footer-contact p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.footer-copyright p {
+  margin: 0;
+  font-size: 16px; /* Explicitly set to 16px for standard readability */
+  color: var(--text-light);
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.02);
+}
+
+.chuti-logo-footer {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--text-white);
+  transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.chuti-logo-footer:hover {
+  border-color: var(--accent-color-2);
+  transform: scale(1.05);
+}
+
+.footer.compact-footer {
+  padding: 0.5rem 2rem; /* Even more reduced vertical padding when compact */
+}
+
+.footer.compact-footer .chuti-logo-footer {
+  width: 50px; /* Slightly smaller logo in compact footer */
+  height: 50px;
+}
+
+.footer.compact-footer .footer-copyright p {
+  font-size: 0.9rem; /* Slightly smaller font size when compact */
+}
+
+/* Hide old h1 styling within .footer-logo */
+.footer-logo h1 {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-logo {
+    order: 1;
+  }
+
+  .footer-copyright {
+    order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .chuti-logo-footer {
+    width: 60px;
+    height: 60px;
+  }
+
+  .footer-copyright p {
+    font-size: 0.95rem; /* Standard readable font size for mobile */
+  }
+}
