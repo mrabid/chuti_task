@@ -23,31 +23,33 @@
 
 .feature-dropdown {
   padding: 1rem 2rem;
-  border-radius: 10px;
-  border: 1px solid var(--primary-color);
-  background-color: var(--text-white);
+  border-radius: 12px; /* More rounded corners */
+  border: 2px solid var(--primary-color); /* Thicker, vibrant border */
+  background-color: var(--text-white); /* White background */
   font-size: 1.2rem;
+  color: var(--text-dark); /* Dark text color */
   cursor: pointer;
   appearance: none;
-  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23008cff%22%20d%3D%22M287%20197.3l-11.7-11.7-133.3-133.3c-4.7-4.7-12.3-4.7-17%200l-11.7%2011.7L5.4%20197.3c-4.7%204.7-4.7%2012.3%200%2017l11.7%2011.7c4.7%204.7%2012.3%204.7%2017%200l110.6-110.6c4.7-4.7%2012.3-4.7%2017%200l110.6%20110.6c4.7%204.7%2012.3%204.7%2017%200l11.7-11.7c4.7-4.7%204.7-12.3%200-17z%22%2F%3E%3C%2Fsvg%3E);
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%2338c172%22%20d%3D%22M287%20197.3l-11.7-11.7-133.3-133.3c-4.7-4.7-12.3-4.7-17%200l-11.7%2011.7L5.4%20197.3c-4.7%204.7-4.7%2012.3%200%2017l11.7%2011.7c4.7%204.7%2012.3%204.7%2017%200l110.6-110.6c4.7-4.7%2012.3-4.7%2017%200l110.6%20110.6c4.7%204.7%2012.3%204.7%2017%200l11.7-11.7c4.7-4.7%204.7-12.3%200-17z%22%2F%3E%3C%2Fsvg%3E);
   background-repeat: no-repeat;
   background-position: right 1.8rem center;
   background-size: 1.4rem;
   padding-right: 4.5rem;
-  box-shadow: var(--shadow-light);
-  min-width: 250px;
+  box-shadow: var(--shadow-medium); /* Use medium shadow */
+  min-width: 280px; /* Slightly wider dropdown */
   transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
 }
 
 .feature-dropdown:hover {
   transform: translateY(-3px);
-  box-shadow: var(--shadow-medium);
+  box-shadow: var(--shadow-strong); /* Stronger shadow on hover */
+  border-color: var(--secondary-color); /* Secondary color border on hover */
 }
 
 .feature-dropdown:focus {
   outline: none;
   border-color: var(--secondary-color);
-  box-shadow: 0 0 0 0.3rem rgba(56, 193, 114, 0.3);
+  box-shadow: 0 0 0 0.4rem rgba(56, 193, 114, 0.4); /* More vibrant shadow on focus */
 }
 
 .feature-card {
